@@ -1,5 +1,4 @@
 // Two Sums.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <vector>
@@ -22,9 +21,35 @@ public:
     }
 };
 
+void print(std::vector<int> const &input)
+{
+    for (int i = 0; i < input.size(); i++) {
+        std::cout << input.at(i) << ' ';
+    }
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Solution solver;
+    
+    //Example 1
+    vector<int> nums = {2,7,11,15}; //[2,7,11,15]
+    int target = 9; // 9
+    std::cout << "When nums = [2,7,11,15] and target = 9, the solver found the following solution [ ";
+    print(solver.twoSum(nums,target));
+    std::cout << "]" << endl << endl;
+    
+    //Example 2
+    nums = {3,2,4}; //[3,2,4]
+    target = 6; // 6
+    std::cout << "When nums = [3,2,4] and target = 6, the solver found the following solution [ ";
+    print(solver.twoSum(nums,target));
+    std::cout << "]" << endl << endl;
+    
+    // Example 3
+    nums = {3,3}; //[3,3]
+    target = 6; // 6
+    std::cout << "When nums = [3,3] and target = 6, the solver found the following solution [ ";
+    print(solver.twoSum(nums,target));
+    std::cout << "]" << endl << endl;
 }
-
